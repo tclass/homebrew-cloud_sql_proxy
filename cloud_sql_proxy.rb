@@ -7,7 +7,7 @@ class CloudSqlProxy < Formula
   head "https://github.com/GoogleCloudPlatform/cloudsql-proxy.git"
   
   depends_on "go" => :build
-  depends_on "git"
+  depends_on "git" => :build
 
   def install
     ENV["GOPATH"] = buildpath
