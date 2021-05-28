@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: homebrew-cloud_sql_proxy
+  annotations:
+    github.com/project-slug: tclass/homebrew-cloud_sql_proxy
+spec:
+  type: other
+  lifecycle: unknown
+  owner: team-a
