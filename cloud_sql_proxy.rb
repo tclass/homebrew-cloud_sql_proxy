@@ -3,7 +3,7 @@ class CloudSqlProxy < Formula
   homepage "https://github.com/GoogleCloudPlatform/cloudsql-proxy"
   version "1.24.0"
   url "https://github.com/GoogleCloudPlatform/cloudsql-proxy/archive/v#{version}.tar.gz"
-  sha256 "a2dca081982b155ba5bf2604b438321b9d3bc2e9502e944e43ee988359cb7de6"
+  sha256 "fd0dd769d48577e74522a8206032ef5ae80c34d5273ee7ea1d707a4e3dffec0c"
   head "https://github.com/GoogleCloudPlatform/cloudsql-proxy.git"
   
   depends_on "go" => :build
