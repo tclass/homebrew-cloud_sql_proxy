@@ -12,6 +12,11 @@ class CloudSqlProxy < Formula
     system "go", "build", "-o", bin/"cloud_sql_proxy", "./cmd/cloud_sql_proxy"
   end
 
+  service do
+    run [opt_bin/"cloud_sql_proxy", "-dir=/tmp/cloudsql"]
+    keep_alive true
+  end
+
   test do
     system "cloud_sql_proxy -version"
   end
