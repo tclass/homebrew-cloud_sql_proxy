@@ -15,6 +15,10 @@ class CloudSqlProxy < Formula
   service do
     run [opt_bin/"cloud_sql_proxy"]
     keep_alive true
+        
+    # Select all environment variables that start with CSQL_PROXY_
+    csql_proxy_env_vars = ENV.select { |k, _| k.start_with?("CSQL_PROXY_") }
+    environment_variables csql_proxy_env_vars
   end
 
   test do
