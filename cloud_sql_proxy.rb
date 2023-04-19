@@ -21,11 +21,12 @@ class CloudSqlProxy < Formula
     csql_proxy_env_vars = csql_proxy_env_vars.transform_keys do |key|
       key.sub(/^HOMEBREW_/, "")
     end
-    
-    environment_variables csql_proxy_env_vars
+
+    environment_variables csql_proxy_env_vars.to_h
   end
 
   test do
     system "cloud_sql_proxy -version"
   end
 end
+
