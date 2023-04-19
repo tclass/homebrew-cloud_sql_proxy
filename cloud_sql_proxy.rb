@@ -13,7 +13,7 @@ class CloudSqlProxy < Formula
   end
 
   service do
-    run [opt_bin/"cloud_sql_proxy", "-dir=/tmp/cloudsql"]
+    run [opt_bin/"cloud_sql_proxy"]
     keep_alive true
   end
 
