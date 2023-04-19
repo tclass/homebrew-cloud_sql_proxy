@@ -17,7 +17,11 @@ class CloudSqlProxy < Formula
     keep_alive true
         
     # Select all environment variables that start with CSQL_PROXY_
-    csql_proxy_env_vars = ENV.select { |k, _| k.start_with?("CSQL_PROXY_") }
+    csql_proxy_env_vars = ENV.select { |k, _| k.start_with?("HOMEBREW_CSQL_PROXY_") }
+    csql_proxy_env_vars = csql_proxy_env_vars.transform_keys do |key|
+      key.sub(/^HOMEBREW_/, "")
+    end
+    
     environment_variables csql_proxy_env_vars
   end
 
