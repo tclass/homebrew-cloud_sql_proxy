@@ -1,9 +1,9 @@
 class CloudSqlProxy < Formula
   desc "The Cloud SQL Proxy for GoogleCloudPlatform"
   homepage "https://github.com/GoogleCloudPlatform/cloudsql-proxy"
-  version "2.6.0"
+  version "2.9.0"
   url "https://github.com/GoogleCloudPlatform/cloud-sql-proxy/archive/refs/tags/v#{version}.tar.gz"
-  sha256 "53626d199051074f4be93f8e9e4d7e390d627328c8e492c44577fe675629f245"
+  sha256 "f1623f1a8ac4798ac95f4908bd655265b947aad3101b4d68750527f375bf42a1"
   head "https://github.com/GoogleCloudPlatform/cloud-sql-proxy.git"
 
   depends_on "go" => :build
